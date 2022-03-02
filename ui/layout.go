@@ -6,7 +6,7 @@ func Setup(options *UiOptions) {
 	swatchesContainer := BuildSwatches(options)
 	colorPicker := SetupColorPicker(options)
 
-	appLayout := container.NewBorder(nil, swatchesContainer, nil, colorPicker)
+	appLayout := container.NewBorder(nil, swatchesContainer, nil, colorPicker, options.Canvas)
 
 	options.Window.SetContent(appLayout)
 }
